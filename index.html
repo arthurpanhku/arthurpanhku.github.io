@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chao (Arthur) Pan — Agentic AI & Application Security</title>
-<meta name="description" content="Chao (Arthur) Pan — Agentic AI & Application Security expert in Hong Kong. Builder of multi-agent LLM platforms, AI coding agents, and LLM security gateways.">
+<title>Arthur Pan — Agentic AI × Security</title>
+<meta name="description" content="Arthur Pan — security engineer building agentic AI systems. Open-source multi-agent platforms, AI coding agents, and LLM security tooling.">
 <style>
   :root {
     --bg: #0d1117;
@@ -14,8 +14,7 @@
     --text-dim: #8b949e;
     --accent: #58a6ff;
     --accent-2: #3fb950;
-    --tag-bg: #1f2937;
-    --max-w: 860px;
+    --max-w: 780px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -30,26 +29,15 @@
   a:hover { text-decoration: underline; }
   .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
-  /* ===== Nav ===== */
-  nav {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(13,17,23,.85); backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-  }
-  nav .container { display: flex; align-items: center; justify-content: space-between; height: 56px; }
-  nav .logo { font-weight: 700; color: var(--text); }
-  nav .links a { color: var(--text-dim); margin-left: 20px; font-size: .9rem; }
-  nav .links a:hover { color: var(--text); text-decoration: none; }
-  @media (max-width: 640px) { nav .links { display: none; } }
-
   /* ===== Hero ===== */
-  header { padding: 88px 0 64px; }
+  header { padding: 110px 0 70px; }
   .kicker { color: var(--accent-2); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem; margin-bottom: 14px; }
-  h1 { font-size: clamp(2.1rem, 5.5vw, 3.2rem); line-height: 1.15; letter-spacing: -.02em; }
-  .subtitle { font-size: clamp(1.05rem, 2.6vw, 1.35rem); color: var(--text-dim); margin-top: 10px; }
-  .summary { margin-top: 22px; max-width: 640px; color: var(--text-dim); }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.12; letter-spacing: -.02em; }
+  .subtitle { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--text-dim); margin-top: 12px; }
+  .summary { margin-top: 24px; max-width: 600px; color: var(--text-dim); }
   .summary strong { color: var(--text); font-weight: 600; }
-  .hero-links { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .creds { margin-top: 16px; color: var(--text-dim); font-size: .82rem; font-family: ui-monospace, monospace; }
+  .hero-links { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
   .btn {
     display: inline-block; padding: 9px 18px; border-radius: 8px;
     border: 1px solid var(--border); color: var(--text); font-size: .92rem;
@@ -59,19 +47,17 @@
   .btn.primary:hover { filter: brightness(1.1); color: #0d1117; }
 
   /* ===== Sections ===== */
-  section { padding: 48px 0; border-top: 1px solid var(--border); }
-  h2 {
-    font-size: 1.35rem; margin-bottom: 28px; display: flex; align-items: center; gap: 10px;
-  }
+  section { padding: 52px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 1.35rem; margin-bottom: 26px; display: flex; align-items: center; gap: 10px; }
   h2::before { content: "§"; color: var(--accent-2); font-family: ui-monospace, monospace; }
 
-  /* ===== Experience timeline ===== */
-  .job { display: grid; grid-template-columns: 150px 1fr; gap: 18px; margin-bottom: 30px; }
-  .job .period { color: var(--text-dim); font-size: .85rem; font-family: ui-monospace, monospace; padding-top: 3px; }
-  .job h3 { font-size: 1.05rem; }
-  .job .org { color: var(--accent); font-weight: 600; }
-  .job p { color: var(--text-dim); font-size: .93rem; margin-top: 6px; }
-  @media (max-width: 640px) { .job { grid-template-columns: 1fr; gap: 4px; } }
+  /* ===== Focus cards ===== */
+  .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+  .focus {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 20px;
+  }
+  .focus h3 { font-size: 1rem; margin-bottom: 8px; }
+  .focus p { color: var(--text-dim); font-size: .88rem; }
 
   /* ===== Projects ===== */
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
@@ -86,59 +72,24 @@
   .card p { color: var(--text-dim); font-size: .88rem; flex: 1; }
   .card .stack { color: var(--accent-2); font-size: .78rem; font-family: ui-monospace, monospace; }
 
-  /* ===== Tags ===== */
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .tag {
-    background: var(--tag-bg); border: 1px solid var(--border); border-radius: 999px;
-    padding: 4px 12px; font-size: .82rem; color: var(--text-dim);
-  }
-  .skill-group { margin-bottom: 20px; }
-  .skill-group h3 { font-size: .95rem; margin-bottom: 10px; color: var(--text); }
-
-  /* ===== Certs ===== */
-  .cert-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
-  .cert {
-    background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
-    padding: 10px 14px; font-size: .86rem;
-  }
-  .cert .by { color: var(--text-dim); font-size: .78rem; display: block; }
-
-  /* ===== Education ===== */
-  .edu { margin-bottom: 14px; }
-  .edu .period { color: var(--text-dim); font-size: .85rem; font-family: ui-monospace, monospace; }
-
   /* ===== Footer ===== */
-  footer { border-top: 1px solid var(--border); padding: 36px 0 48px; color: var(--text-dim); font-size: .85rem; }
+  footer { border-top: 1px solid var(--border); padding: 40px 0 56px; color: var(--text-dim); font-size: .88rem; }
   footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="container">
-    <span class="logo">arthur.pan</span>
-    <span class="links">
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#education">Education</a>
-    </span>
-  </div>
-</nav>
-
 <header class="container">
-  <p class="kicker">Hong Kong SAR · Agentic AI × Security</p>
-  <h1>Chao (Arthur) Pan</h1>
-  <p class="subtitle">Agentic AI &amp; Application Security Expert</p>
+  <p class="kicker">Hong Kong · Agentic AI × Security</p>
+  <h1>Arthur Pan</h1>
+  <p class="subtitle">Security engineer building agentic AI systems.</p>
   <p class="summary">
-    8+ years across application security, AI/ML security, red teaming, and financial-sector
-    technology risk. Currently leading Application Security &amp; AI Agent development at
-    <strong>Deloitte Hong Kong</strong>, and pursuing an MSc in Computer Science at
-    <strong>The University of Hong Kong</strong>. Builder of open-source AI systems with
-    <strong>170+ GitHub stars</strong> — multi-agent LLM platforms, an AI coding agent,
-    and an LLM security gateway.
+    8+ years securing software and financial systems, now focused on
+    <strong>building AI agents</strong> — and keeping them safe. I write open-source
+    multi-agent platforms, AI coding agents, and LLM security tooling, with
+    <strong>170+ stars</strong> on GitHub across a dozen original projects.
   </p>
+  <p class="creds">CISSP · OSWE · builder of things that pass their own security review</p>
   <div class="hero-links">
     <a class="btn primary" href="https://github.com/arthurpanhku" target="_blank" rel="noopener">GitHub</a>
     <a class="btn" href="https://www.linkedin.com/in/chao-p-50085a125" target="_blank" rel="noopener">LinkedIn</a>
@@ -146,49 +97,26 @@
   </div>
 </header>
 
-<section id="experience">
+<section id="focus">
   <div class="container">
-    <h2>Experience</h2>
-
-    <div class="job">
-      <div class="period">2025.09 — Now</div>
-      <div>
-        <h3><span class="org">Deloitte China</span> · Assistant Manager, Application Security &amp; Agentic AI</h3>
-        <p>Lead the Global Secure SDLC programme and Agentic AI security strategy — LLM/ML threat
-        modelling, prompt-injection defence, guardrail design, and AI DevOps pipeline hardening.
-        Architect AI agents (memory, skills, MCP) that automate security workflows and vulnerability
-        triage. CIO Award 2026 — one of 10 recipients among ~200 staff.</p>
+    <h2>What I Do</h2>
+    <div class="focus-grid">
+      <div class="focus">
+        <h3>Agentic AI</h3>
+        <p>Multi-agent orchestration, agent memory &amp; skills, MCP / A2A integrations —
+        agents that do real work, with guardrails designed in from the start.</p>
+      </div>
+      <div class="focus">
+        <h3>AI Security</h3>
+        <p>LLM threat modelling, prompt-injection defence, guardrail engineering,
+        and securing the pipelines that ship AI into production.</p>
+      </div>
+      <div class="focus">
+        <h3>Application Security</h3>
+        <p>Secure SDLC, code auditing, and offensive security — years of breaking
+        systems in regulated environments, applied to building better ones.</p>
       </div>
     </div>
-
-    <div class="job">
-      <div class="period">2021.12 — 2025.09</div>
-      <div>
-        <h3><span class="org">Bond Connect Company Limited</span> · Associate &amp; Information Security Officer</h3>
-        <p>Owned the enterprise security posture of a systemically important financial-market
-        infrastructure (HKEX × CFETS joint venture). Vulnerability management, incident response,
-        and cross-border cybersecurity governance for China Fixed Income trading systems.</p>
-      </div>
-    </div>
-
-    <div class="job">
-      <div class="period">2020.05 — 2021.12</div>
-      <div>
-        <h3><span class="org">ICBC (Asia)</span> · Deputy Manager, Cybersecurity</h3>
-        <p>First-line cybersecurity function at an HKMA-regulated Domestic Systemically Important
-        Bank — security compliance, technology risk assessment, and cyber incident response.</p>
-      </div>
-    </div>
-
-    <div class="job">
-      <div class="period">2017.10 — 2020.05</div>
-      <div>
-        <h3><span class="org">China Unicom Global</span> · Assistant Manager, IT Engineering &amp; Digital Transformation</h3>
-        <p>Led digital-transformation initiatives and IT engineering delivery, with weekly progress
-        reporting directly to the CEO.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -246,101 +174,9 @@
   </div>
 </section>
 
-<section id="skills">
-  <div class="container">
-    <h2>Skills</h2>
-
-    <div class="skill-group">
-      <h3>AI &amp; Agentic Systems</h3>
-      <div class="tags">
-        <span class="tag">AI Agents (Memory · Skills · MCP / A2A)</span>
-        <span class="tag">LangGraph Multi-Agent Orchestration</span>
-        <span class="tag">LLM / ML Security</span>
-        <span class="tag">Prompt-Injection Defence &amp; Guardrails</span>
-        <span class="tag">RAG / LightRAG · Knowledge Graphs</span>
-        <span class="tag">AI Threat Modelling</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <h3>Application Security &amp; DevSecOps</h3>
-      <div class="tags">
-        <span class="tag">Secure SDLC</span>
-        <span class="tag">SAST / DAST / SCA</span>
-        <span class="tag">CI/CD Security</span>
-        <span class="tag">Container Security</span>
-        <span class="tag">Code Auditing</span>
-        <span class="tag">Penetration Testing &amp; Red Teaming</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <h3>Engineering</h3>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">Go</span>
-        <span class="tag">TypeScript</span>
-        <span class="tag">Solidity</span>
-        <span class="tag">FastAPI</span>
-        <span class="tag">React / Vue</span>
-        <span class="tag">Neo4j · PostgreSQL · Redis</span>
-        <span class="tag">Docker</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <h3>Governance, Risk &amp; Compliance</h3>
-      <div class="tags">
-        <span class="tag">ISO 27001 / 27017</span>
-        <span class="tag">Technology Risk Management</span>
-        <span class="tag">HKMA Regulatory Compliance</span>
-        <span class="tag">DFIR</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="certifications">
-  <div class="container">
-    <h2>Certifications</h2>
-    <div class="cert-list">
-      <div class="cert">CISSP <span class="by">ISC²</span></div>
-      <div class="cert">CSSLP <span class="by">ISC²</span></div>
-      <div class="cert">OSWE <span class="by">Offensive Security</span></div>
-      <div class="cert">OSWP <span class="by">Offensive Security</span></div>
-      <div class="cert">CISA <span class="by">ISACA</span></div>
-      <div class="cert">CRISC <span class="by">ISACA</span></div>
-      <div class="cert">CRTE <span class="by">Altered Security</span></div>
-      <div class="cert">CRTP <span class="by">Altered Security</span></div>
-      <div class="cert">CBSP <span class="by">Blockchain Security</span></div>
-      <div class="cert">CFA Level I Passed <span class="by">CFA Institute</span></div>
-      <div class="cert">Machine Learning Specialization <span class="by">Stanford Online / Coursera</span></div>
-      <div class="cert">Agentic AI · LangGraph · Guardrails <span class="by">DeepLearning.AI</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="education">
-  <div class="container">
-    <h2>Education</h2>
-    <div class="edu">
-      <strong>MSc, Computer Science</strong> — The University of Hong Kong (HKU)
-      <div class="period">2024 — 2026</div>
-    </div>
-    <div class="edu">
-      <strong>MSc, Information Technology Management</strong> — Hong Kong Baptist University (HKBU)
-      <div class="period">2016 — 2017</div>
-    </div>
-    <div class="edu">
-      <strong>BSc, Management Science</strong> — Anhui University of Finance and Economics
-      <div class="period">2011 — 2015</div>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="container">
-    <span>© 2026 Chao (Arthur) Pan</span>
+    <span>© 2026 Arthur Pan</span>
     <span>
       <a href="https://github.com/arthurpanhku" target="_blank" rel="noopener">GitHub</a> ·
       <a href="https://www.linkedin.com/in/chao-p-50085a125" target="_blank" rel="noopener">LinkedIn</a> ·
