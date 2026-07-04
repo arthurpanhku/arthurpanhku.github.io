@@ -1,0 +1,137 @@
+<svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartoon avatar: a geek girl programmer coding at her desk">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#1b6fd0" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#0d3a6b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a9714a"/>
+      <stop offset="100%" stop-color="#7c4e30"/>
+    </linearGradient>
+    <linearGradient id="hoodie" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#30435c"/>
+      <stop offset="100%" stop-color="#1f2c3d"/>
+    </linearGradient>
+    <clipPath id="round"><rect x="0" y="0" width="440" height="440" rx="26"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <!-- backdrop -->
+    <rect x="0" y="0" width="440" height="440" fill="url(#panel)"/>
+    <rect x="0" y="0" width="440" height="440" fill="url(#glow)"/>
+
+    <!-- back-wall monitor with code -->
+    <g opacity="0.9">
+      <rect x="24" y="70" width="120" height="88" rx="6" fill="#0b0f14" stroke="#30363d" stroke-width="2"/>
+      <rect x="34" y="82" width="46" height="6" rx="3" fill="#3fb950"/>
+      <rect x="34" y="94" width="70" height="6" rx="3" fill="#58a6ff"/>
+      <rect x="46" y="106" width="54" height="6" rx="3" fill="#8b949e"/>
+      <rect x="46" y="118" width="40" height="6" rx="3" fill="#e3b341"/>
+      <rect x="34" y="130" width="62" height="6" rx="3" fill="#58a6ff"/>
+      <rect x="34" y="142" width="34" height="6" rx="3" fill="#3fb950"/>
+    </g>
+
+    <!-- floating code glyphs -->
+    <text x="330" y="86" font-family="monospace" font-size="26" fill="#58a6ff" opacity="0.5">&lt;/&gt;</text>
+    <text x="372" y="150" font-family="monospace" font-size="20" fill="#3fb950" opacity="0.45">{ }</text>
+    <text x="300" y="150" font-family="monospace" font-size="16" fill="#8b949e" opacity="0.4">$_</text>
+
+    <!-- electric sparks (nod to the electro theme) -->
+    <path d="M356 200 l-14 22 l10 2 l-12 22 l30 -30 l-11 -2 z" fill="#ffd23f" opacity="0.95"/>
+    <path d="M92 236 l-9 15 l7 1 l-8 15 l20 -20 l-7 -1 z" fill="#58a6ff" opacity="0.85"/>
+
+    <!-- ===== character ===== -->
+    <!-- hoodie / shoulders -->
+    <path d="M138 440 C138 350 168 320 220 320 C272 320 302 350 302 440 Z" fill="url(#hoodie)"/>
+    <!-- hood roll behind neck -->
+    <path d="M176 332 C190 316 250 316 264 332 C250 340 190 340 176 332 Z" fill="#26364a"/>
+    <!-- zipper + drawstrings -->
+    <line x1="220" y1="330" x2="220" y2="440" stroke="#0d1117" stroke-width="3"/>
+    <path d="M210 332 q-4 26 -2 44" stroke="#cbd5e1" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M230 332 q4 26 2 44" stroke="#cbd5e1" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="208" cy="378" r="3.5" fill="#58a6ff"/>
+    <circle cx="232" cy="378" r="3.5" fill="#58a6ff"/>
+
+    <!-- neck -->
+    <rect x="206" y="286" width="28" height="34" rx="10" fill="#f0c6a4"/>
+    <path d="M206 300 q14 12 28 0 v-14 h-28 z" fill="#e2b088" opacity="0.6"/>
+
+    <!-- hair back -->
+    <path d="M150 210 C150 132 178 104 220 104 C262 104 290 132 290 210 C290 246 276 268 262 280 L178 280 C164 268 150 246 150 210 Z" fill="url(#hair)"/>
+
+    <!-- face -->
+    <path d="M168 196 C168 156 190 138 220 138 C250 138 272 156 272 196 C272 232 250 256 220 256 C190 256 168 232 168 196 Z" fill="#ffdcbe"/>
+    <!-- cheek blush -->
+    <ellipse cx="190" cy="212" rx="11" ry="7" fill="#ff9aa8" opacity="0.5"/>
+    <ellipse cx="250" cy="212" rx="11" ry="7" fill="#ff9aa8" opacity="0.5"/>
+
+    <!-- eyebrows -->
+    <path d="M182 176 q12 -7 24 -1" stroke="#7c4e30" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M234 175 q12 -6 24 1" stroke="#7c4e30" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+    <!-- eyes -->
+    <g>
+      <ellipse cx="196" cy="196" rx="12" ry="15" fill="#fff"/>
+      <ellipse cx="197" cy="197" rx="9" ry="12" fill="#8a5a34"/>
+      <circle cx="197" cy="198" r="5" fill="#3a2416"/>
+      <circle cx="200" cy="192" r="3" fill="#fff"/>
+      <circle cx="193" cy="202" r="1.6" fill="#fff" opacity="0.8"/>
+    </g>
+    <g>
+      <ellipse cx="244" cy="196" rx="12" ry="15" fill="#fff"/>
+      <ellipse cx="243" cy="197" rx="9" ry="12" fill="#8a5a34"/>
+      <circle cx="243" cy="198" r="5" fill="#3a2416"/>
+      <circle cx="246" cy="192" r="3" fill="#fff"/>
+      <circle cx="239" cy="202" r="1.6" fill="#fff" opacity="0.8"/>
+    </g>
+
+    <!-- nose + mouth -->
+    <path d="M218 210 q4 4 -1 7" stroke="#e2a67f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M208 228 q12 10 24 0" stroke="#c56b58" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- bangs / fringe over forehead -->
+    <path d="M150 200 C148 140 182 104 220 104 C258 104 292 140 290 200
+             C286 176 276 168 262 172 C256 150 244 150 240 168
+             C236 150 224 148 220 166 C216 148 204 150 200 168
+             C196 150 184 150 178 172 C164 168 154 176 150 200 Z" fill="url(#hair)"/>
+    <!-- side locks -->
+    <path d="M156 196 C150 232 158 262 172 280 C160 264 156 232 160 208 Z" fill="#7c4e30"/>
+    <path d="M284 196 C290 232 282 262 268 280 C280 264 284 232 280 208 Z" fill="#7c4e30"/>
+    <!-- ahoge (signature stray strand) -->
+    <path d="M220 104 C224 88 236 82 244 74 C238 86 240 96 232 106 Z" fill="#a9714a"/>
+
+    <!-- headphones -->
+    <path d="M150 190 C150 128 186 100 220 100 C254 100 290 128 290 190"
+          stroke="#1f2c3d" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <rect x="140" y="180" width="24" height="40" rx="10" fill="#58a6ff"/>
+    <rect x="276" y="180" width="24" height="40" rx="10" fill="#58a6ff"/>
+    <rect x="145" y="188" width="14" height="24" rx="7" fill="#0d1117" opacity="0.35"/>
+    <rect x="281" y="188" width="14" height="24" rx="7" fill="#0d1117" opacity="0.35"/>
+
+    <!-- ===== laptop in foreground ===== -->
+    <ellipse cx="220" cy="408" rx="150" ry="20" fill="#000" opacity="0.35"/>
+    <!-- lid (back facing us) -->
+    <path d="M150 388 L150 340 Q150 332 158 332 L282 332 Q290 332 290 340 L290 388 Z" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+    <!-- glowing bolt logo on lid -->
+    <path d="M224 348 l-12 18 l8 1 l-9 16 l24 -24 l-9 -1 z" fill="#3fb950" opacity="0.95"/>
+    <!-- base / keyboard deck -->
+    <path d="M132 388 L308 388 L322 404 Q324 410 316 410 L124 410 Q116 410 118 404 Z" fill="#1f262e" stroke="#30363d" stroke-width="2"/>
+    <rect x="150" y="393" width="140" height="4" rx="2" fill="#30363d" opacity="0.7"/>
+
+    <!-- coffee mug -->
+    <g>
+      <rect x="356" y="368" width="34" height="30" rx="5" fill="#21262d" stroke="#30363d" stroke-width="2"/>
+      <path d="M390 374 q14 2 12 14 q-2 8 -12 8" stroke="#30363d" stroke-width="3" fill="none"/>
+      <path d="M366 360 q-4 -8 2 -14" stroke="#8b949e" stroke-width="2.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+      <path d="M378 360 q4 -8 -2 -14" stroke="#8b949e" stroke-width="2.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- panel border on top -->
+  <rect x="1" y="1" width="438" height="438" rx="26" fill="none" stroke="#30363d" stroke-width="2"/>
+</svg>

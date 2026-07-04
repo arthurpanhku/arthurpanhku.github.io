@@ -30,7 +30,13 @@
   .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 
   /* ===== Hero ===== */
-  header { padding: 110px 0 70px; }
+  header { padding: 88px 0 64px; }
+  .hero { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: center; }
+  .hero-avatar { width: 100%; max-width: 300px; height: auto; justify-self: end; }
+  @media (max-width: 720px) {
+    .hero { grid-template-columns: 1fr; gap: 28px; }
+    .hero-avatar { max-width: 220px; justify-self: start; order: -1; }
+  }
   .kicker { color: var(--accent-2); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem; margin-bottom: 14px; }
   h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.12; letter-spacing: -.02em; }
   .subtitle { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--text-dim); margin-top: 12px; }
@@ -80,20 +86,25 @@
 <body>
 
 <header class="container">
-  <p class="kicker">Hong Kong · Agentic AI × Security</p>
-  <h1>Arthur Pan</h1>
-  <p class="subtitle">Security engineer building agentic AI systems.</p>
-  <p class="summary">
-    8+ years securing software and financial systems, now focused on
-    <strong>building AI agents</strong> — and keeping them safe. I write open-source
-    multi-agent platforms, AI coding agents, and LLM security tooling, with
-    <strong>170+ stars</strong> on GitHub across a dozen original projects.
-  </p>
-  <p class="creds">CISSP · OSWE · builder of things that pass their own security review</p>
-  <div class="hero-links">
-    <a class="btn primary" href="https://github.com/arthurpanhku" target="_blank" rel="noopener">GitHub</a>
-    <a class="btn" href="https://www.linkedin.com/in/chao-p-50085a125" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn" href="mailto:u3638376@connect.hku.hk">Email</a>
+  <div class="hero">
+    <div class="hero-text">
+      <p class="kicker">Hong Kong · Agentic AI × Security</p>
+      <h1>Arthur Pan</h1>
+      <p class="subtitle">Security engineer building agentic AI systems.</p>
+      <p class="summary">
+        8+ years securing software and financial systems, now focused on
+        <strong>building AI agents</strong> — and keeping them safe. I write open-source
+        multi-agent platforms, AI coding agents, and LLM security tooling, with
+        <strong>170+ stars</strong> on GitHub across a dozen original projects.
+      </p>
+      <p class="creds">CISSP · OSWE · builder of things that pass their own security review</p>
+      <div class="hero-links">
+        <a class="btn primary" href="https://github.com/arthurpanhku" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/chao-p-50085a125" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="mailto:u3638376@connect.hku.hk">Email</a>
+      </div>
+    </div>
+    <img class="hero-avatar" src="avatar.svg" alt="Cartoon avatar of Arthur — a geek programmer coding at a desk with headphones and electric sparks" width="300" height="300">
   </div>
 </header>
 
