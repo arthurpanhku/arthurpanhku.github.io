@@ -1,0 +1,287 @@
+<svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anime-style illustration of a girl programmer coding at a multi-monitor workstation in a dark office">
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#131924"/>
+      <stop offset="100%" stop-color="#0a0e15"/>
+    </linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12233d"/>
+      <stop offset="100%" stop-color="#0a1424"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a3728"/>
+      <stop offset="100%" stop-color="#2c2016"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c98c5c"/>
+      <stop offset="55%" stop-color="#a9714a"/>
+      <stop offset="100%" stop-color="#7c4e30"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe7d2"/>
+      <stop offset="100%" stop-color="#ffd6ba"/>
+    </linearGradient>
+    <linearGradient id="hoodie" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#20262f"/>
+      <stop offset="100%" stop-color="#0f1319"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="50%" cy="70%" r="65%">
+      <stop offset="0%" stop-color="#e8ab5a"/>
+      <stop offset="55%" stop-color="#9c6231"/>
+      <stop offset="100%" stop-color="#5e3a1e"/>
+    </radialGradient>
+    <radialGradient id="lampglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd98a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffd98a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="softer"><feGaussianBlur stdDeviation="9"/></filter>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="420" rx="16"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect x="0" y="0" width="1200" height="420" fill="url(#room)"/>
+
+    <!-- ===== background: window with night bokeh ===== -->
+    <g filter="url(#softer)">
+      <rect x="40" y="24" width="250" height="250" rx="4" fill="url(#night)"/>
+      <g>
+        <circle cx="90" cy="80" r="10" fill="#ffcf70" opacity="0.8"/>
+        <circle cx="150" cy="60" r="7" fill="#8fb8ff" opacity="0.7"/>
+        <circle cx="220" cy="100" r="12" fill="#ff9d6b" opacity="0.7"/>
+        <circle cx="120" cy="140" r="8" fill="#ffd98a" opacity="0.6"/>
+        <circle cx="200" cy="170" r="9" fill="#7fd0ff" opacity="0.6"/>
+        <circle cx="70" cy="190" r="6" fill="#ffcf70" opacity="0.6"/>
+        <circle cx="250" cy="210" r="10" fill="#ffbb7a" opacity="0.5"/>
+      </g>
+    </g>
+    <!-- window frame -->
+    <g stroke="#2b3340" stroke-width="4" opacity="0.6">
+      <line x1="165" y1="24" x2="165" y2="274"/>
+      <line x1="40" y1="150" x2="290" y2="150"/>
+    </g>
+
+    <!-- bookshelf right -->
+    <g filter="url(#soft)" opacity="0.85">
+      <rect x="1120" y="20" width="80" height="300" fill="#161b22"/>
+      <g>
+        <rect x="1128" y="40" width="12" height="60" fill="#3a4759"/>
+        <rect x="1144" y="46" width="12" height="54" fill="#4a5a2e"/>
+        <rect x="1160" y="38" width="12" height="62" fill="#5a3a3a"/>
+        <rect x="1176" y="44" width="12" height="56" fill="#3a4759"/>
+        <rect x="1128" y="120" width="12" height="58" fill="#4a5a2e"/>
+        <rect x="1144" y="116" width="12" height="62" fill="#5a3a3a"/>
+        <rect x="1160" y="122" width="12" height="56" fill="#3a4759"/>
+        <rect x="1176" y="118" width="12" height="60" fill="#4a5a2e"/>
+      </g>
+    </g>
+
+    <!-- floor lamp glow -->
+    <circle cx="360" cy="70" r="90" fill="url(#lampglow)"/>
+
+    <!-- blurred coworkers -->
+    <g filter="url(#soft)" opacity="0.7">
+      <g>
+        <circle cx="470" cy="120" r="26" fill="#20262f"/>
+        <path d="M424 200 C424 156 448 150 470 150 C492 150 516 156 516 200 Z" fill="#20262f"/>
+        <path d="M446 148 a24 24 0 0 1 48 0" fill="none" stroke="#3a5170" stroke-width="3" opacity="0.5"/>
+      </g>
+      <g>
+        <circle cx="1040" cy="150" r="24" fill="#1b212a"/>
+        <path d="M998 220 C998 180 1020 176 1040 176 C1060 176 1082 180 1082 220 Z" fill="#1b212a"/>
+      </g>
+    </g>
+    <!-- coworker monitor glow far right -->
+    <rect x="1000" y="180" width="70" height="46" rx="3" fill="#0d2036" opacity="0.8" filter="url(#soft)"/>
+
+    <!-- ===== desk ===== -->
+    <rect x="0" y="330" width="1200" height="90" fill="url(#desk)"/>
+    <rect x="0" y="330" width="1200" height="5" fill="#6b5138" opacity="0.6"/>
+
+    <!-- ===== monitor A (left) ===== -->
+    <g>
+      <rect x="150" y="150" width="250" height="185" rx="6" fill="#05070a" stroke="#30363d" stroke-width="3"/>
+      <rect x="162" y="162" width="226" height="161" rx="3" fill="#0d1117"/>
+      <rect x="168" y="162" width="16" height="161" fill="#0b0f15"/>
+      <!-- code lines -->
+      <g>
+        <rect x="192" y="172" width="60" height="6" rx="3" fill="#ff7b72"/>
+        <rect x="192" y="184" width="120" height="6" rx="3" fill="#79c0ff"/>
+        <rect x="204" y="196" width="90" height="6" rx="3" fill="#a5d6ff"/>
+        <rect x="204" y="208" width="140" height="6" rx="3" fill="#8b949e"/>
+        <rect x="216" y="220" width="70" height="6" rx="3" fill="#d2a8ff"/>
+        <rect x="216" y="232" width="110" height="6" rx="3" fill="#7ee787"/>
+        <rect x="204" y="244" width="80" height="6" rx="3" fill="#79c0ff"/>
+        <rect x="192" y="256" width="50" height="6" rx="3" fill="#ffa657"/>
+        <rect x="204" y="268" width="130" height="6" rx="3" fill="#a5d6ff"/>
+        <rect x="204" y="280" width="96" height="6" rx="3" fill="#8b949e"/>
+        <rect x="192" y="292" width="66" height="6" rx="3" fill="#7ee787"/>
+        <rect x="192" y="304" width="104" height="6" rx="3" fill="#79c0ff"/>
+      </g>
+      <rect x="262" y="335" width="26" height="14" fill="#1c2530"/>
+      <rect x="240" y="349" width="70" height="6" rx="3" fill="#1c2530"/>
+    </g>
+
+    <!-- ===== monitor B (center) ===== -->
+    <g>
+      <rect x="415" y="135" width="285" height="200" rx="6" fill="#05070a" stroke="#30363d" stroke-width="3"/>
+      <rect x="427" y="147" width="261" height="176" rx="3" fill="#0d1117"/>
+      <!-- terminal header -->
+      <rect x="427" y="147" width="261" height="18" fill="#161b22"/>
+      <circle cx="439" cy="156" r="3.5" fill="#ff5f56"/>
+      <circle cx="451" cy="156" r="3.5" fill="#ffbd2e"/>
+      <circle cx="463" cy="156" r="3.5" fill="#27c93f"/>
+      <g>
+        <rect x="437" y="176" width="90" height="6" rx="3" fill="#7ee787"/>
+        <rect x="437" y="188" width="150" height="6" rx="3" fill="#a5d6ff"/>
+        <rect x="437" y="200" width="70" height="6" rx="3" fill="#8b949e"/>
+        <rect x="437" y="212" width="130" height="6" rx="3" fill="#79c0ff"/>
+        <rect x="437" y="224" width="180" height="6" rx="3" fill="#8b949e"/>
+        <rect x="437" y="236" width="60" height="6" rx="3" fill="#ffa657"/>
+        <rect x="437" y="248" width="120" height="6" rx="3" fill="#7ee787"/>
+        <rect x="437" y="260" width="96" height="6" rx="3" fill="#a5d6ff"/>
+        <rect x="437" y="272" width="150" height="6" rx="3" fill="#8b949e"/>
+        <rect x="437" y="284" width="40" height="6" rx="3" fill="#d2a8ff"/>
+        <rect x="437" y="296" width="14" height="8" fill="#58a6ff"/>
+      </g>
+      <rect x="545" y="335" width="26" height="16" fill="#1c2530"/>
+      <rect x="520" y="351" width="76" height="6" rx="3" fill="#1c2530"/>
+    </g>
+
+    <!-- ===== OPEN SOURCE poster (right) ===== -->
+    <g transform="translate(1040,60)">
+      <rect x="0" y="0" width="70" height="96" rx="4" fill="#e9edf1" stroke="#c3ccd6" stroke-width="2"/>
+      <g transform="translate(35,36)">
+        <circle r="20" fill="none" stroke="#3fb950" stroke-width="6"/>
+        <path d="M0 -20 a20 20 0 0 1 17 10" fill="none" stroke="#2ea043" stroke-width="6"/>
+        <circle r="6" fill="#3fb950"/>
+      </g>
+      <rect x="12" y="66" width="46" height="5" rx="2.5" fill="#57606a"/>
+      <rect x="16" y="76" width="38" height="5" rx="2.5" fill="#8b949e"/>
+      <text x="35" y="92" font-family="monospace" font-size="7" fill="#3fb950" text-anchor="middle">OPEN SOURCE</text>
+    </g>
+
+    <!-- ===== chair back ===== -->
+    <ellipse cx="880" cy="270" rx="150" ry="150" fill="#12161d"/>
+    <ellipse cx="880" cy="270" rx="138" ry="140" fill="#0d1117" opacity="0.5"/>
+
+    <!-- ===== character ===== -->
+    <!-- hair back -->
+    <path d="M782 210 C772 108 820 62 880 62 C940 62 988 108 978 210
+             C974 262 958 320 946 360 L814 360 C802 320 786 262 782 210 Z" fill="url(#hair)"/>
+    <path d="M792 206 C788 140 826 84 826 84 C812 140 814 230 834 330 L816 330 C802 296 794 250 792 206 Z" fill="#7c4e30" opacity="0.5"/>
+    <path d="M968 206 C972 140 934 84 934 84 C948 140 946 230 926 330 L944 330 C958 296 966 250 968 206 Z" fill="#7c4e30" opacity="0.5"/>
+
+    <!-- hoodie -->
+    <path d="M760 420 C760 322 812 292 880 292 C948 292 1000 322 1000 420 Z" fill="url(#hoodie)"/>
+    <path d="M842 300 C856 316 904 316 918 300 L918 292 L842 292 Z" fill="#161b22"/>
+    <!-- white tee -->
+    <path d="M858 300 L902 300 L896 330 L864 330 Z" fill="#e9edf1"/>
+    <path d="M858 300 L880 322 L902 300 L896 312 L880 328 L864 312 Z" fill="#c3ccd6" opacity="0.7"/>
+    <!-- lanyard -->
+    <path d="M866 300 L876 360" stroke="#58a6ff" stroke-width="6" fill="none"/>
+    <path d="M894 300 L884 360" stroke="#58a6ff" stroke-width="6" fill="none"/>
+    <rect x="868" y="358" width="24" height="30" rx="3" fill="#0d1117" stroke="#58a6ff" stroke-width="2"/>
+    <rect x="873" y="365" width="14" height="4" rx="2" fill="#58a6ff"/>
+    <!-- zipper -->
+    <line x1="880" y1="322" x2="880" y2="420" stroke="#0a0d12" stroke-width="3"/>
+
+    <!-- neck -->
+    <path d="M860 262 L900 262 L898 292 Q880 302 862 292 Z" fill="#f3c9a8"/>
+    <path d="M860 264 q20 15 40 0 l-2 10 q-18 12 -36 0 z" fill="#e8b48c" opacity="0.7"/>
+
+    <!-- face -->
+    <path d="M812 172 C812 122 840 98 880 98 C920 98 948 122 948 172
+             C948 212 924 246 906 258 C892 268 868 268 854 258 C836 246 812 212 812 172 Z" fill="url(#skin)"/>
+    <path d="M824 146 C826 178 838 190 854 194 C838 188 832 168 832 148 Z" fill="#f3c3a0" opacity="0.5"/>
+    <path d="M936 146 C934 178 922 190 906 194 C922 188 928 168 928 148 Z" fill="#f3c3a0" opacity="0.5"/>
+
+    <!-- ears -->
+    <path d="M812 172 q-13 2 -13 15 q0 13 15 12 q-6 -15 -2 -27 z" fill="url(#skin)"/>
+    <path d="M948 172 q13 2 13 15 q0 13 -15 12 q6 -15 2 -27 z" fill="url(#skin)"/>
+
+    <!-- blush -->
+    <ellipse cx="842" cy="206" rx="14" ry="7" fill="#ffa0a8" opacity="0.5"/>
+    <ellipse cx="918" cy="206" rx="14" ry="7" fill="#ffa0a8" opacity="0.5"/>
+
+    <!-- brows (straight, focused) -->
+    <path d="M826 160 q20 -5 38 0" stroke="#8a5630" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <path d="M896 160 q18 -5 38 0" stroke="#8a5630" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+
+    <!-- left eye -->
+    <g>
+      <path d="M824 184 Q846 172 866 184" stroke="#4a3326" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M824 186 Q846 196 866 186 Q864 212 846 216 Q828 212 824 192 Z" fill="#fff"/>
+      <ellipse cx="846" cy="196" rx="17" ry="19" fill="url(#iris)"/>
+      <ellipse cx="846" cy="198" rx="8" ry="10" fill="#2a1810"/>
+      <circle cx="851" cy="190" r="5.5" fill="#fff"/>
+      <circle cx="841" cy="204" r="2.6" fill="#fff" opacity="0.85"/>
+    </g>
+    <!-- right eye -->
+    <g>
+      <path d="M894 184 Q914 172 936 184" stroke="#4a3326" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M894 186 Q914 196 936 186 Q932 212 914 216 Q896 212 894 192 Z" fill="#fff"/>
+      <ellipse cx="914" cy="196" rx="17" ry="19" fill="url(#iris)"/>
+      <ellipse cx="914" cy="198" rx="8" ry="10" fill="#2a1810"/>
+      <circle cx="919" cy="190" r="5.5" fill="#fff"/>
+      <circle cx="909" cy="204" r="2.6" fill="#fff" opacity="0.85"/>
+    </g>
+
+    <!-- nose + mouth (cool / focused) -->
+    <path d="M878 218 q4 3 0 6" stroke="#e2a67f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M868 236 q12 4 24 0" stroke="#b05a4a" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- bangs -->
+    <path d="M808 178
+             C804 118 838 88 880 88
+             C922 88 956 118 952 178
+             C948 150 936 142 928 152
+             C930 130 916 122 908 136
+             C908 114 890 112 886 134
+             C880 112 864 116 862 138
+             C858 120 842 124 838 148
+             C832 132 816 140 808 178 Z" fill="url(#hair)"/>
+    <path d="M838 116 C858 100 902 98 924 116 C900 108 868 110 850 128 Z" fill="#d7a06e" opacity="0.65"/>
+    <path d="M810 172 C802 204 806 240 824 266 C812 238 812 204 820 178 Z" fill="#8a5630"/>
+    <path d="M950 172 C958 204 954 240 936 266 C948 238 948 204 940 178 Z" fill="#8a5630"/>
+    <!-- ahoge -->
+    <path d="M880 88 C882 66 896 58 908 48 C894 62 896 76 888 90 Z" fill="#c98c5c"/>
+
+    <!-- headphones -->
+    <path d="M806 176 C806 108 840 82 880 82 C920 82 954 108 954 176"
+          stroke="#1a222d" stroke-width="11" fill="none" stroke-linecap="round"/>
+    <rect x="796" y="164" width="26" height="46" rx="12" fill="#1a222d"/>
+    <rect x="938" y="164" width="26" height="46" rx="12" fill="#1a222d"/>
+    <rect x="801" y="172" width="16" height="30" rx="8" fill="#58a6ff"/>
+    <rect x="943" y="172" width="16" height="30" rx="8" fill="#58a6ff"/>
+
+    <!-- hoodie sleeve + hand resting on desk -->
+    <path d="M760 420 C752 372 772 344 806 344 C820 344 830 350 834 360 L816 420 Z" fill="url(#hoodie)"/>
+    <ellipse cx="812" cy="360" rx="18" ry="13" fill="#ffe0c6"/>
+    <path d="M800 358 q6 -6 24 0" stroke="#e8b48c" stroke-width="2" fill="none" opacity="0.6"/>
+
+    <!-- ===== foreground props ===== -->
+    <!-- energy drink can -->
+    <g transform="translate(700,338)">
+      <rect x="0" y="0" width="34" height="58" rx="6" fill="#3a5f8a"/>
+      <rect x="0" y="0" width="34" height="58" rx="6" fill="url(#skin)" opacity="0"/>
+      <rect x="0" y="18" width="34" height="22" fill="#cfd8e3"/>
+      <path d="M6 22 l10 14 l-4 0 l8 12" stroke="#e63c3c" stroke-width="3" fill="none"/>
+      <ellipse cx="17" cy="2" rx="17" ry="5" fill="#9aa7b5"/>
+      <ellipse cx="17" cy="0" rx="14" ry="4" fill="#c3ccd6"/>
+    </g>
+    <!-- snack basket -->
+    <g transform="translate(600,360)">
+      <path d="M0 6 L66 6 L60 40 L6 40 Z" fill="#b23b2e"/>
+      <path d="M0 6 L66 6 L64 14 L2 14 Z" fill="#d24a3a"/>
+      <g fill="#e8b04a">
+        <rect x="10" y="-6" width="8" height="20" rx="3" transform="rotate(-12 14 4)"/>
+        <rect x="24" y="-8" width="8" height="22" rx="3" transform="rotate(6 28 3)"/>
+        <rect x="38" y="-6" width="8" height="20" rx="3" transform="rotate(-6 42 4)"/>
+        <rect x="50" y="-4" width="8" height="18" rx="3" transform="rotate(14 54 5)"/>
+      </g>
+    </g>
+  </g>
+
+  <rect x="1.5" y="1.5" width="1197" height="417" rx="16" fill="none" stroke="#30363d" stroke-width="3"/>
+</svg>
