@@ -1,0 +1,32 @@
+---
+layout: default
+title: Writing
+description: "Project write-ups and essays by Arthur Pan on agentic AI, LLM security, and application security."
+permalink: /blog/
+---
+<header class="container page-header">
+  <p class="kicker">~/writing</p>
+  <h1>Writing</h1>
+  <p class="subtitle">Project write-ups &amp; essays on agentic AI and security.</p>
+</header>
+
+<section>
+  <div class="container">
+    {% if site.posts.size > 0 %}
+    <ul class="posts">
+      {% for post in site.posts %}
+      <li class="post-item">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncate: 160 }}</p>
+          {% if post.tags %}<div class="tags">{{ post.tags | join: " · " }}</div>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="summary">First post coming soon.</p>
+    {% endif %}
+  </div>
+</section>

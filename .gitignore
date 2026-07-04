@@ -1,1 +1,7 @@
+_site/
+.jekyll-cache/
+.jekyll-metadata
 banner.png
+.DS_Store
+vendor/
+Gemfile.lock

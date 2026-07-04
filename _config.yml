@@ -1,0 +1,18 @@
+title: "Arthur Pan"
+tagline: "Security engineer building agentic AI systems."
+description: "Arthur Pan — security engineer building agentic AI systems. Open-source multi-agent platforms, AI coding agents, and LLM security tooling."
+url: "https://arthurpanhku.me"
+baseurl: ""
+author: "Arthur Pan"
+
+permalink: /blog/:title/
+markdown: kramdown
+highlighter: rouge
+timezone: Asia/Hong_Kong
+
+exclude:
+  - README.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - vendor

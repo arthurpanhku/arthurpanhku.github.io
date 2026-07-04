@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="article container">
+  <a class="back" href="{{ '/blog/' | relative_url }}">← Writing</a>
+  <div class="article-header">
+    <h1>{{ page.title }}</h1>
+    <p class="article-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% if page.tags %}{% for t in page.tags %} · <span class="tag">{{ t }}</span>{% endfor %}{% endif %}
+    </p>
+  </div>
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

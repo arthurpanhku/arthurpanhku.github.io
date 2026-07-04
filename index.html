@@ -1,91 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arthur Pan — Agentic AI × Security</title>
-<meta name="description" content="Arthur Pan — security engineer building agentic AI systems. Open-source multi-agent platforms, AI coding agents, and LLM security tooling.">
-<style>
-  :root {
-    --bg: #0d1117;
-    --bg-card: #161b22;
-    --border: #30363d;
-    --text: #e6edf3;
-    --text-dim: #8b949e;
-    --accent: #58a6ff;
-    --accent-2: #3fb950;
-    --max-w: 780px;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
-
-  /* ===== Hero ===== */
-  header { padding: 40px 0 60px; }
-  .hero-banner {
-    display: block; width: 100%; height: auto; border-radius: 16px;
-    border: 1px solid var(--border); margin-bottom: 40px;
-    box-shadow: 0 12px 40px rgba(0,0,0,.4);
-  }
-  .kicker { color: var(--accent-2); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem; margin-bottom: 14px; }
-  h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.12; letter-spacing: -.02em; }
-  .subtitle { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--text-dim); margin-top: 12px; }
-  .summary { margin-top: 24px; max-width: 600px; color: var(--text-dim); }
-  .summary strong { color: var(--text); font-weight: 600; }
-  .creds { margin-top: 16px; color: var(--text-dim); font-size: .82rem; font-family: ui-monospace, monospace; }
-  .hero-links { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
-  .btn {
-    display: inline-block; padding: 9px 18px; border-radius: 8px;
-    border: 1px solid var(--border); color: var(--text); font-size: .92rem;
-  }
-  .btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-  .btn.primary { background: var(--accent); border-color: var(--accent); color: #0d1117; font-weight: 600; }
-  .btn.primary:hover { filter: brightness(1.1); color: #0d1117; }
-
-  /* ===== Sections ===== */
-  section { padding: 52px 0; border-top: 1px solid var(--border); }
-  h2 { font-size: 1.35rem; margin-bottom: 26px; display: flex; align-items: center; gap: 10px; }
-  h2::before { content: "§"; color: var(--accent-2); font-family: ui-monospace, monospace; }
-
-  /* ===== Focus cards ===== */
-  .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
-  .focus {
-    background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 20px;
-  }
-  .focus h3 { font-size: 1rem; margin-bottom: 8px; }
-  .focus p { color: var(--text-dim); font-size: .88rem; }
-
-  /* ===== Projects ===== */
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-  .card {
-    background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
-    padding: 18px; display: flex; flex-direction: column; gap: 8px;
-    transition: border-color .15s ease, transform .15s ease;
-  }
-  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .card h3 { font-size: 1rem; display: flex; justify-content: space-between; align-items: baseline; }
-  .card .stars { color: #e3b341; font-size: .82rem; font-weight: 400; white-space: nowrap; }
-  .card p { color: var(--text-dim); font-size: .88rem; flex: 1; }
-  .card .stack { color: var(--accent-2); font-size: .78rem; font-family: ui-monospace, monospace; }
-
-  /* ===== Footer ===== */
-  footer { border-top: 1px solid var(--border); padding: 40px 0 56px; color: var(--text-dim); font-size: .88rem; }
-  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-</style>
-</head>
-<body>
-
+---
+layout: default
+---
 <header class="container">
-  <img class="hero-banner" src="banner.jpg" alt="Anime-style illustration of a programmer coding at a multi-monitor workstation" width="1600" height="872">
+  <img class="hero-banner" src="{{ '/banner.jpg' | relative_url }}" alt="Anime-style illustration of a programmer coding at a multi-monitor workstation" width="1600" height="872">
   <p class="kicker">Hong Kong · Agentic AI × Security</p>
   <h1>Arthur Pan</h1>
   <p class="subtitle">Security engineer building agentic AI systems.</p>
@@ -106,7 +23,7 @@
 <section id="focus">
   <div class="container">
     <h2>What I Do</h2>
-    <div class="focus-grid">
+    <div class="focus-grid reveal">
       <div class="focus">
         <h3>Agentic AI</h3>
         <p>Multi-agent orchestration, agent memory &amp; skills, MCP / A2A integrations —
@@ -129,7 +46,7 @@
 <section id="projects">
   <div class="container">
     <h2>Open-Source Projects</h2>
-    <div class="grid">
+    <div class="grid reveal">
 
       <a class="card" href="https://github.com/arthurpanhku" target="_blank" rel="noopener">
         <h3>DocSentinel <span class="stars">★ 90</span></h3>
@@ -180,16 +97,26 @@
   </div>
 </section>
 
-<footer>
+<section id="writing">
   <div class="container">
-    <span>© 2026 Arthur Pan</span>
-    <span>
-      <a href="https://github.com/arthurpanhku" target="_blank" rel="noopener">GitHub</a> ·
-      <a href="https://www.linkedin.com/in/chao-p-50085a125" target="_blank" rel="noopener">LinkedIn</a> ·
-      <a href="mailto:u3638376@connect.hku.hk">Email</a>
-    </span>
+    <div class="section-head">
+      <h2>Writing</h2>
+      <a class="more" href="{{ '/blog/' | relative_url }}">All posts →</a>
+    </div>
+    {% if site.posts.size > 0 %}
+    <ul class="posts reveal">
+      {% for post in site.posts limit: 4 %}
+      <li class="post-item">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncate: 150 }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="summary">First post coming soon.</p>
+    {% endif %}
   </div>
-</footer>
-
-</body>
-</html>
+</section>
