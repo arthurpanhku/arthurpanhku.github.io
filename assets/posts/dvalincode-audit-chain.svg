@@ -1,0 +1,47 @@
+<svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <defs>
+    <marker id="c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <rect width="820" height="320" fill="#0d1117"/>
+
+  <!-- three chained entries -->
+  <g>
+    <!-- block 1 -->
+    <rect x="30"  y="46" width="230" height="150" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="48" y="74" fill="#e6edf3" font-size="14">entry #41</text>
+    <text x="48" y="98" fill="#8b949e" font-size="12">action: edit main.ts</text>
+    <text x="48" y="118" fill="#8b949e" font-size="12">time: 09:14:02</text>
+    <text x="48" y="150" fill="#6e7681" font-size="11.5">prev: 0000…</text>
+    <text x="48" y="172" fill="#3fb950" font-size="11.5">hash: a1f7…</text>
+
+    <!-- block 2 -->
+    <rect x="295" y="46" width="230" height="150" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="313" y="74" fill="#e6edf3" font-size="14">entry #42</text>
+    <text x="313" y="98" fill="#8b949e" font-size="12">action: run tests</text>
+    <text x="313" y="118" fill="#8b949e" font-size="12">time: 09:14:37</text>
+    <text x="313" y="150" fill="#6e7681" font-size="11.5">prev: a1f7…</text>
+    <text x="313" y="172" fill="#3fb950" font-size="11.5">hash: 9c3e…</text>
+
+    <!-- block 3 -->
+    <rect x="560" y="46" width="230" height="150" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <text x="578" y="74" fill="#e6edf3" font-size="14">entry #43</text>
+    <text x="578" y="98" fill="#8b949e" font-size="12">action: shell: git commit</text>
+    <text x="578" y="118" fill="#8b949e" font-size="12">time: 09:15:10</text>
+    <text x="578" y="150" fill="#6e7681" font-size="11.5">prev: 9c3e…</text>
+    <text x="578" y="172" fill="#3fb950" font-size="11.5">hash: 7b02…</text>
+  </g>
+
+  <!-- chain arrows: hash of prev feeds next.prev -->
+  <path d="M260 165 L286 165 L286 150" stroke="#58a6ff" stroke-width="2" fill="none" marker-end="url(#c)"/>
+  <path d="M525 165 L551 165 L551 150" stroke="#58a6ff" stroke-width="2" fill="none" marker-end="url(#c)"/>
+
+  <!-- hash formula -->
+  <text x="410" y="238" fill="#8b949e" font-size="13" text-anchor="middle">hash(entry) = SHA-256( prev_hash ‖ entry_data )</text>
+
+  <!-- tamper note -->
+  <rect x="150" y="262" width="520" height="40" rx="8" fill="#2d1416" stroke="#ff7b72" stroke-width="1.4"/>
+  <text x="410" y="287" fill="#ff7b72" font-size="13" text-anchor="middle">Alter any past entry → its hash changes → every later link breaks. Tamper-evident.</text>
+</svg>

@@ -1,0 +1,82 @@
+<svg viewBox="0 0 820 520" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#58a6ff"/>
+    </marker>
+    <marker id="ad" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6e7681"/>
+    </marker>
+  </defs>
+
+  <rect width="820" height="520" fill="#0d1117"/>
+
+  <!-- frontends -->
+  <text x="60" y="34" fill="#8b949e" font-size="12">one binary →</text>
+  <g fill="#161b22" stroke="#30363d" stroke-width="1.5">
+    <rect x="60" y="44" width="130" height="46" rx="8"/>
+    <rect x="205" y="44" width="130" height="46" rx="8"/>
+    <rect x="350" y="44" width="130" height="46" rx="8"/>
+  </g>
+  <g fill="#e6edf3" font-size="14" text-anchor="middle">
+    <text x="125" y="72">Terminal</text>
+    <text x="270" y="72">Web UI</text>
+    <text x="415" y="72">Desktop</text>
+  </g>
+
+  <!-- funnel to core -->
+  <path d="M270 90 L270 118 L270 128" stroke="#58a6ff" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M125 90 L125 108 L262 108" stroke="#30363d" stroke-width="1.5" fill="none"/>
+  <path d="M415 90 L415 108 L278 108" stroke="#30363d" stroke-width="1.5" fill="none"/>
+
+  <!-- agent core -->
+  <rect x="60" y="132" width="420" height="86" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="1.6"/>
+  <text x="82" y="164" fill="#e6edf3" font-size="17">Agent Core</text>
+  <text x="82" y="190" fill="#8b949e" font-size="13">8-state execution loop</text>
+  <g transform="translate(430,175)" fill="none" stroke="#58a6ff" stroke-width="2">
+    <path d="M0 -16 A16 16 0 1 1 -14 8" marker-end="url(#a)"/>
+  </g>
+
+  <path d="M270 218 L270 244" stroke="#58a6ff" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+  <!-- policy gate -->
+  <rect x="60" y="248" width="420" height="76" rx="10" fill="#161b22" stroke="#e3b341" stroke-width="1.6"/>
+  <text x="82" y="278" fill="#e3b341" font-size="16">Policy Gate</text>
+  <text x="82" y="302" fill="#8b949e" font-size="12.5">allow / deny · tools · models · shell · file paths</text>
+
+  <path d="M270 324 L270 350" stroke="#58a6ff" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+  <!-- sandbox -->
+  <rect x="60" y="354" width="420" height="76" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="1.6"/>
+  <text x="82" y="384" fill="#3fb950" font-size="16">Sandboxed execution</text>
+  <text x="82" y="408" fill="#8b949e" font-size="12.5">isolated shell · scoped filesystem · bounded tools</text>
+
+  <!-- audit rail -->
+  <rect x="560" y="132" width="200" height="298" rx="10" fill="#10151c" stroke="#30363d" stroke-width="1.5"/>
+  <text x="660" y="162" fill="#e6edf3" font-size="14" text-anchor="middle">Hash-chained</text>
+  <text x="660" y="182" fill="#e6edf3" font-size="14" text-anchor="middle">audit log</text>
+  <g fill="#161b22" stroke="#3fb950" stroke-width="1.3">
+    <rect x="592" y="204" width="136" height="34" rx="6"/>
+    <rect x="592" y="248" width="136" height="34" rx="6"/>
+    <rect x="592" y="292" width="136" height="34" rx="6"/>
+    <rect x="592" y="336" width="136" height="34" rx="6"/>
+  </g>
+  <g fill="#8b949e" font-size="11" text-anchor="middle">
+    <text x="660" y="225">entry · hash(prev)</text>
+    <text x="660" y="269">entry · hash(prev)</text>
+    <text x="660" y="313">entry · hash(prev)</text>
+    <text x="660" y="357">entry · hash(prev)</text>
+  </g>
+  <g stroke="#3fb950" stroke-width="1" opacity="0.6">
+    <line x1="660" y1="238" x2="660" y2="248"/>
+    <line x1="660" y1="282" x2="660" y2="292"/>
+    <line x1="660" y1="326" x2="660" y2="336"/>
+  </g>
+
+  <!-- append arrows into audit -->
+  <g>
+    <path d="M480 175 L586 175 L586 210" stroke="#6e7681" stroke-width="1.4" fill="none" marker-end="url(#ad)"/>
+    <path d="M480 286 L560 286" stroke="#6e7681" stroke-width="1.4" fill="none" marker-end="url(#ad)"/>
+    <path d="M480 392 L586 392 L586 366" stroke="#6e7681" stroke-width="1.4" fill="none" marker-end="url(#ad)"/>
+  </g>
+  <text x="512" y="264" fill="#6e7681" font-size="10.5">append</text>
+</svg>

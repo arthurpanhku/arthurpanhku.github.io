@@ -1,0 +1,65 @@
+<svg viewBox="0 0 820 380" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <defs>
+    <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#58a6ff"/>
+    </marker>
+    <marker id="bg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#3fb950"/>
+    </marker>
+  </defs>
+
+  <rect width="820" height="380" fill="#0d1117"/>
+
+  <!-- nodes: row1 L->R (1-4), row2 R->L (5-8) -->
+  <g fill="#161b22" stroke="#30363d" stroke-width="1.5">
+    <rect x="40"  y="70"  width="150" height="60" rx="9"/>
+    <rect x="230" y="70"  width="150" height="60" rx="9"/>
+    <rect x="420" y="70"  width="150" height="60" rx="9"/>
+    <rect x="610" y="70"  width="150" height="60" rx="9"/>
+    <rect x="610" y="220" width="150" height="60" rx="9"/>
+    <rect x="420" y="220" width="150" height="60" rx="9"/>
+    <rect x="230" y="220" width="150" height="60" rx="9"/>
+    <rect x="40"  y="220" width="150" height="60" rx="9"/>
+  </g>
+
+  <!-- step numbers -->
+  <g fill="#6e7681" font-size="11">
+    <text x="52" y="88">1</text><text x="242" y="88">2</text>
+    <text x="432" y="88">3</text><text x="622" y="88">4</text>
+    <text x="622" y="238">5</text><text x="432" y="238">6</text>
+    <text x="242" y="238">7</text><text x="52" y="238">8</text>
+  </g>
+
+  <!-- labels -->
+  <g fill="#e6edf3" font-size="14" text-anchor="middle">
+    <text x="115" y="107">Receive task</text>
+    <text x="305" y="107">Plan step</text>
+    <text x="495" y="100">Policy</text><text x="495" y="118">check</text>
+    <text x="685" y="107">Select tool</text>
+    <text x="685" y="248">Execute</text><text x="685" y="266">(sandbox)</text>
+    <text x="495" y="257">Observe</text>
+    <text x="305" y="257">Append audit</text>
+    <text x="115" y="257">Reflect</text>
+  </g>
+
+  <!-- arrows row1 -->
+  <path d="M190 100 L226 100" stroke="#58a6ff" stroke-width="2" marker-end="url(#b)"/>
+  <path d="M380 100 L416 100" stroke="#58a6ff" stroke-width="2" marker-end="url(#b)"/>
+  <path d="M570 100 L606 100" stroke="#58a6ff" stroke-width="2" marker-end="url(#b)"/>
+  <!-- down 4->5 -->
+  <path d="M685 130 L685 216" stroke="#58a6ff" stroke-width="2" marker-end="url(#b)"/>
+  <!-- arrows row2 (right to left) -->
+  <path d="M610 250 L574 250" stroke="#58a6ff" stroke-width="2" marker-end="url(#b)"/>
+  <path d="M420 250 L384 250" stroke="#58a6ff" stroke-width="2" marker-end="url(#b)"/>
+  <path d="M230 250 L194 250" stroke="#58a6ff" stroke-width="2" marker-end="url(#b)"/>
+
+  <!-- loop back: Reflect(8) -> Plan(2) -->
+  <path d="M115 220 L115 168 Q115 158 125 158 L295 158 Q305 158 305 148 L305 132"
+        stroke="#3fb950" stroke-width="2" fill="none" stroke-dasharray="5 4" marker-end="url(#bg)"/>
+  <text x="150" y="150" fill="#3fb950" font-size="11">loop</text>
+
+  <!-- done branch -->
+  <path d="M60 280 L60 320 L150 320" stroke="#6e7681" stroke-width="1.6" fill="none" marker-end="url(#b)"/>
+  <rect x="150" y="302" width="86" height="34" rx="17" fill="#161b22" stroke="#3fb950" stroke-width="1.4"/>
+  <text x="193" y="324" fill="#3fb950" font-size="13" text-anchor="middle">done</text>
+</svg>
