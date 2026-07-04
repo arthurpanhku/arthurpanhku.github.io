@@ -85,6 +85,7 @@ section h2::before { content: "§"; color: var(--accent-2); font-family: ui-mono
 .card .stars { color: #e3b341; font-size: .82rem; font-weight: 400; white-space: nowrap; }
 .card p { color: var(--text-dim); font-size: .88rem; flex: 1; }
 .card .stack { color: var(--accent-2); font-size: .78rem; font-family: ui-monospace, monospace; }
+.card .read { color: var(--accent); font-size: .82rem; font-family: ui-monospace, monospace; margin-top: 4px; }
 
 /* ===== Writing list ===== */
 .posts { list-style: none; }
