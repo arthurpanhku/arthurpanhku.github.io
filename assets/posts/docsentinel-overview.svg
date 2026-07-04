@@ -1,0 +1,80 @@
+<svg viewBox="0 0 820 470" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <defs>
+    <marker id="do" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <rect width="820" height="470" fill="#0d1117"/>
+
+  <!-- inputs -->
+  <g fill="#161b22" stroke="#30363d" stroke-width="1.5">
+    <rect x="50" y="34" width="270" height="46" rx="8"/>
+    <rect x="338" y="34" width="180" height="46" rx="8"/>
+    <rect x="600" y="34" width="170" height="46" rx="8"/>
+  </g>
+  <g font-size="13" text-anchor="middle">
+    <text x="185" y="62" fill="#e6edf3">Documents · md / pdf / csv / xlsx</text>
+    <text x="428" y="62" fill="#e6edf3">Assessment query</text>
+    <text x="685" y="62" fill="#d2a8ff">MCP / A2A callers</text>
+  </g>
+  <path d="M185 80 L185 116" stroke="#58a6ff" stroke-width="2" marker-end="url(#do)"/>
+  <path d="M428 80 L428 116" stroke="#58a6ff" stroke-width="2" marker-end="url(#do)"/>
+  <path d="M685 80 L685 100 L700 100 L700 116" stroke="#d2a8ff" stroke-width="2" fill="none" marker-end="url(#do)"/>
+
+  <!-- orchestrator -->
+  <rect x="50" y="118" width="720" height="152" rx="10" fill="#0f151d" stroke="#58a6ff" stroke-width="1.6"/>
+  <text x="66" y="140" fill="#58a6ff" font-size="14">LangGraph orchestrator · six phase-specialised agents</text>
+  <g fill="#161b22" stroke="#30363d" stroke-width="1.4">
+    <rect x="70"  y="152" width="212" height="44" rx="7"/>
+    <rect x="304" y="152" width="212" height="44" rx="7"/>
+    <rect x="538" y="152" width="212" height="44" rx="7"/>
+    <rect x="70"  y="210" width="212" height="44" rx="7"/>
+    <rect x="304" y="210" width="212" height="44" rx="7"/>
+    <rect x="538" y="210" width="212" height="44" rx="7"/>
+  </g>
+  <g fill="#e6edf3" font-size="13" text-anchor="middle">
+    <text x="176" y="179">Intake agent</text>
+    <text x="410" y="179">Threat-model agent</text>
+    <text x="644" y="179">Design-review agent</text>
+    <text x="176" y="237">Code-review agent</text>
+    <text x="410" y="237">Controls agent</text>
+    <text x="644" y="237">Report agent</text>
+  </g>
+
+  <!-- down to layers -->
+  <path d="M230 270 L230 304" stroke="#58a6ff" stroke-width="2" marker-end="url(#do)"/>
+  <path d="M230 304 L230 274" stroke="#58a6ff" stroke-width="2" marker-end="url(#do)"/>
+  <path d="M600 270 L600 304" stroke="#58a6ff" stroke-width="2" marker-end="url(#do)"/>
+  <path d="M600 304 L600 274" stroke="#58a6ff" stroke-width="2" marker-end="url(#do)"/>
+
+  <!-- hybrid retrieval -->
+  <rect x="50" y="308" width="366" height="140" rx="10" fill="#0f151d" stroke="#3fb950" stroke-width="1.6"/>
+  <text x="66" y="330" fill="#3fb950" font-size="14">Hybrid retrieval</text>
+  <g fill="#161b22" stroke="#30363d" stroke-width="1.4">
+    <rect x="66" y="342" width="160" height="88" rx="7"/>
+    <rect x="240" y="342" width="160" height="88" rx="7"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="146" y="372" fill="#e6edf3" font-size="13">Vector</text>
+    <text x="146" y="392" fill="#8b949e" font-size="11.5">ChromaDB</text>
+    <text x="146" y="412" fill="#8b949e" font-size="11">semantic</text>
+    <text x="320" y="372" fill="#e6edf3" font-size="13">Graph</text>
+    <text x="320" y="392" fill="#8b949e" font-size="11.5">LightRAG</text>
+    <text x="320" y="412" fill="#8b949e" font-size="11">relational</text>
+  </g>
+
+  <!-- multi-llm -->
+  <rect x="450" y="308" width="320" height="140" rx="10" fill="#0f151d" stroke="#e3b341" stroke-width="1.6"/>
+  <text x="466" y="330" fill="#e3b341" font-size="14">Multi-LLM gateway</text>
+  <g fill="#161b22" stroke="#30363d" stroke-width="1.4">
+    <rect x="466" y="348" width="90" height="72" rx="7"/>
+    <rect x="566" y="348" width="90" height="72" rx="7"/>
+    <rect x="666" y="348" width="90" height="72" rx="7"/>
+  </g>
+  <g fill="#e6edf3" font-size="12.5" text-anchor="middle">
+    <text x="511" y="389">Claude</text>
+    <text x="611" y="389">GPT</text>
+    <text x="711" y="389">local</text>
+  </g>
+</svg>

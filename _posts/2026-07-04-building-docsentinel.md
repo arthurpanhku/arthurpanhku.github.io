@@ -11,6 +11,12 @@ security assessment across the software lifecycle. The interesting decision wasn
 it was refusing to make it *one* model call. Instead it's **six specialised agents** coordinated
 by a graph. This post is about why.
 
+<img src="/assets/posts/docsentinel-overview.svg" alt="DocSentinel system overview: documents and queries enter a LangGraph orchestrator of six phase-specialised agents, which draws on a hybrid retrieval layer (vector + graph) and a multi-LLM gateway, and is callable over MCP/A2A">
+
+*Documents and queries flow into a six-agent orchestrator, which leans on a hybrid retrieval
+layer and a multi-LLM gateway, and exposes itself over MCP/A2A. (Agent names here are
+illustrative — see the note at the end.)*
+
 ## The problem with one big prompt
 
 The tempting first version of any LLM tool is a single prompt: dump the context in, ask for the
@@ -48,6 +54,11 @@ graph.add_conditional_edges(
 The payoff: the parts you *can* make deterministic (routing, gating, retries) stay deterministic,
 and only the genuinely fuzzy work is left to the model.
 
+<img src="/assets/posts/docsentinel-agent-graph.svg" alt="The agent graph: intake feeds threat-modelling, a risk router sends high-risk work through code review, controls and evidence before reporting while low-risk work reports directly, with a loop back to re-model on new findings">
+
+*The graph makes control flow explicit: a risk router decides how deep to go, and new findings
+loop back to re-model rather than pushing forward blindly. (Illustrative phase names.)*
+
 ## Retrieval: vector *and* graph
 
 Security knowledge is relational — a control mitigates a threat against an asset. Pure semantic
@@ -58,6 +69,11 @@ search flattens that structure, so DocSentinel runs **hybrid retrieval**:
 
 > Vector search finds the paragraph. The graph tells you which control it came from, what it
 > mitigates, and what else that decision touches.
+
+<img src="/assets/posts/docsentinel-hybrid-rag.svg" alt="Hybrid retrieval: a query fans out to vector search over ChromaDB and graph retrieval over LightRAG, whose results are fused and reranked into the context handed to the agent">
+
+*A query fans out to both retrievers — semantic similarity and graph traversal — and the results
+are fused and reranked into the context the agent actually sees.*
 
 For a reviewer, the second question is the one that matters — and it's the one a flat index can't
 answer.
@@ -77,5 +93,6 @@ didn't anticipate.
 
 ---
 
-*DocSentinel is MIT-licensed and on [GitHub](https://github.com/arthurpanhku). This is the first
-post here — more write-ups on agentic AI and LLM security to come.*
+*DocSentinel is MIT-licensed and on [GitHub](https://github.com/arthurpanhku). The diagrams here
+are explanatory, and the individual agent/phase names are representative rather than exact. More
+write-ups on agentic AI and LLM security to come.*
