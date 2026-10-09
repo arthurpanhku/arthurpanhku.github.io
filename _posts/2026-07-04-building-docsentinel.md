@@ -6,7 +6,12 @@ tags: [agentic-ai, security, rag]
 description: "Why I built DocSentinel as six specialised agents coordinated by a graph, and what hybrid vector + knowledge-graph retrieval actually buys a security review."
 ---
 
-[DocSentinel](https://github.com/arthurpanhku) is an open-source platform that automates
+> **Update, October 2026:** DocSentinel has since added a React console, a governance portal with
+> compliance-framework overlays (NIST SSDF, ISO 27001, EU AI Act and more), an evidence critic for
+> threat models, and A2A 1.0 endpoints. The architecture below still holds. Latest:
+> [the repo](https://github.com/arthurpanhku/DocSentinel).
+
+[DocSentinel](https://github.com/arthurpanhku/DocSentinel) is an open-source platform that automates
 security assessment across the software lifecycle. The interesting decision wasn't the model —
 it was refusing to make it *one* model call. Instead it's **six specialised agents** coordinated
 by a graph. This post is about why.
@@ -93,6 +98,6 @@ didn't anticipate.
 
 ---
 
-*DocSentinel is MIT-licensed and on [GitHub](https://github.com/arthurpanhku). The diagrams here
+*DocSentinel is MIT-licensed and on [GitHub](https://github.com/arthurpanhku/DocSentinel). The diagrams here
 are explanatory, and the individual agent/phase names are representative rather than exact. More
 write-ups on agentic AI and LLM security to come.*
