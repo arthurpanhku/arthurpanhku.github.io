@@ -6,8 +6,14 @@ tags: [agentic-ai, security, developer-tools]
 description: "An AI coding agent built for regulated environments — org-policy enforcement over tools, models, shell and file paths, sandboxed execution, and a hash-chained tamper-evident audit log."
 ---
 
+> **Update, October 2026:** DvalinCode has since grown into an *independent security verifier* for
+> code written by humans and AI agents. It scans, repairs, re-runs your project's own tests, and
+> issues a Verified Fix Record anyone can re-check offline. The governance core described below
+> (policy gate, sandbox, hash-chained audit log) is still the foundation. Current state:
+> [the repo](https://github.com/arthurpanhku/dvalincode) and [dvalincode.dev](https://dvalincode.dev).
+
 Most coding agents assume trust: give them a shell, a model key, and your repo, and let them
-go. That assumption is fine on a hobby project and a non-starter in a bank. [DvalinCode](https://github.com/arthurpanhku)
+go. That assumption is fine on a hobby project and a non-starter in a bank. [DvalinCode](https://github.com/arthurpanhku/dvalincode)
 is my answer to a narrower question — **what does a coding agent look like if it has to satisfy an
 auditor?**
 
@@ -82,5 +88,5 @@ no "relaxed" mode hiding behind a different entry point.
 
 ---
 
-*DvalinCode is MIT-licensed and on [GitHub](https://github.com/arthurpanhku). The diagrams here are
+*DvalinCode is MIT-licensed and on [GitHub](https://github.com/arthurpanhku/dvalincode). The diagrams here are
 explanatory, not screenshots. Next up: notes on the policy language itself.*
