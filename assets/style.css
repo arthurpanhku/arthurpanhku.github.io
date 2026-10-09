@@ -8,6 +8,8 @@
   --accent: #58a6ff;
   --accent-2: #3fb950;
   --max-w: 780px;
+  --max-w-wide: 1200px;
+  --max-w-read: 780px;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
@@ -133,6 +135,40 @@ section h2::before { content: "§"; color: var(--accent-2); font-family: ui-mono
 /* ===== Footer ===== */
 footer { border-top: 1px solid var(--border); padding: 40px 0 56px; color: var(--text-dim); font-size: .88rem; }
 footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+/* ===== Wide screens ===== */
+@media (min-width: 1100px) {
+  .container { max-width: var(--max-w-wide); padding: 0 40px; }
+  .container.narrow { max-width: calc(var(--max-w-read) + 80px); }
+  .article { padding: 56px 40px 88px; }
+  header.page-header { padding: 56px 40px 48px; }
+
+  /* Hero: text left, banner right */
+  header.hero {
+    display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    align-items: center; gap: 56px; padding: 64px 40px 80px;
+  }
+  header.hero .hero-banner { grid-column: 2; grid-row: 1; margin-bottom: 0; }
+  header.hero .hero-text { grid-column: 1; grid-row: 1; }
+  h1 { font-size: 3.6rem; }
+
+  section { padding: 72px 0; }
+  .focus-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .focus { padding: 26px; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .card { padding: 24px; }
+  .card h3 { font-size: 1.1rem; }
+  .card p { font-size: .92rem; }
+
+  /* Homepage writing: two columns */
+  .posts-grid { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 48px; }
+  .posts-grid .post-item:nth-last-child(-n+2):nth-child(odd),
+  .posts-grid .post-item:last-child { border-bottom: none; }
+}
+@media (min-width: 1600px) {
+  :root { --max-w-wide: 1320px; }
+  body { font-size: 17px; }
+}
 
 /* ===== Reveal on scroll (progressive enhancement) ===== */
 .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
